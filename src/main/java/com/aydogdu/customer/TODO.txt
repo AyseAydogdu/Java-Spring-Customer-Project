@@ -1,0 +1,10 @@
+logging -> Lombok(@Log4j2) - log.info|error|warn
+custom exception
+controller response entitiy
+optional
+mysql(n-n 1-n 1-1 relation)- mongo(String)
+iterable
+@Scheduled
+@PostConstruct
+@Transactional
+el ile query
