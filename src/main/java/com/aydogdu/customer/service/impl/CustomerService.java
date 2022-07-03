@@ -58,7 +58,17 @@ public class CustomerService implements ICustomerService {
         return modelMapper.map(customerDto, Customer.class);
 
     }
+    public  List<CustomerDto>entityListToDtoList(List<Customer> customers)
+    {
+        List<CustomerDto> customerDto =new ArrayList<>();
 
+        for(int i=0; i<customers.size(); i++)
+        {
+            customerDto.add(entityToDto(customers.get(i)));
+
+        }
+        return customerDto;
+    }
     public CustomerDto saveCustomer(CustomerDto customerDto) {
 
         return entityToDto(customerRepository.save(dtoToEntity(customerDto)));
